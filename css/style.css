@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+
+body {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-repeat: no-repeat;
+}
+.calc-body {
+    /* background-color: black;
+    border-radius: 2rem;*/
+    padding: 2rem;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 1rem;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.buttons-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#result {
+    color: white;
+    text-align: end;
+    font-weight: 500;
+    font-size: 3rem;
+    margin: 0%;
+    padding: 1rem 0;
+}
+
+.floor {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.func-icon, .num-icon, .math-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 0;
+}
+
+.func-icon {
+    background-color:lightgray;
+    color: black;
+}
+
+.func-icon:hover {
+    background-color:rgb(247, 247, 247);
+}
+
+.math-icon {
+    background-color:orange;
+    color: white;
+    font-size: 2rem;
+}
+
+.math-icon:hover {
+    background-color:rgb(255, 201, 102);
+}
+
+.num-icon {
+    background-color:rgb(80, 80, 80);
+    color: white;
+    font-size: 1.5rem;
+}
+
+.num-icon:hover {
+    background-color:grey;
+}
+
+.num-icon.zero {
+    width: 136px;
+    border-radius: 30px;
+}
+
+/* @media (max-width: 650px) {
+    .calc-body {
+        padding: 1rem;
+    }
+
+    #result {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+    }
+
+    .buttons-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .floor {
+        gap: 0.5rem;
+    }
+
+    .func-icon, .num-icon, .math-icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 0.5rem;
+        cursor: pointer;
+        border: 0;
+    }
+
+    .num-icon {
+        font-size: 0.75rem;
+    }
+
+    .num-icon.zero {
+        width: 68px;
+        border-radius: 30px;
+    }
+
+    .math-icon {
+        font-size: 1rem;
+    }
+} */
