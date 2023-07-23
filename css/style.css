@@ -22,7 +22,7 @@ body {
     background: var(--color-background);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    gap: 1rem;
+    gap: 2rem;
     /* flex-wrap: wrap-reverse; */
     /* gap: 1rem 5rem; */
     
@@ -40,6 +40,10 @@ body {
 .calc-titles {
     color: white;
     
+}
+
+.calc-titles p {
+    margin: 0;
 }
 
 .calc-body {
@@ -147,8 +151,15 @@ body {
         color: white;
         display: block;
         position: fixed;
+        top: 50vh;
         text-align: center;
         font-size: 5vh;
+    }
+}
+
+@media (max-height: 435px) {
+    body {
+        justify-content: flex-start;
     }
 }
 
