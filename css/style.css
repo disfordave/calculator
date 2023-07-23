@@ -225,7 +225,9 @@ body {
 @media (prefers-color-scheme: dark) {
     /* Re-assign previous variables */
     :root {
-      --color-background: linear-gradient(0deg, hsla(221, 45%, 73%, 1) 0%, hsla(221, 42%, 68%, 1) 8%, hsla(221, 39%, 61%, 1) 16%, hsla(220, 37%, 56%, 1) 24%, hsla(220, 35%, 50%, 1) 33%, hsla(220, 43%, 44%, 1) 45%, hsla(220, 50%, 40%, 1) 54%, hsla(220, 58%, 36%, 1) 63%, hsla(220, 63%, 34%, 1) 73%, hsla(220, 67%, 32%, 1) 82%, hsla(220, 72%, 31%, 1) 90%, hsla(220, 78%, 29%, 1) 100%);
+      /* --color-background: linear-gradient(0deg, hsla(221, 45%, 73%, 1) 0%, hsla(221, 42%, 68%, 1) 8%, hsla(221, 39%, 61%, 1) 16%, hsla(220, 37%, 56%, 1) 24%, hsla(220, 35%, 50%, 1) 33%, hsla(220, 43%, 44%, 1) 45%, hsla(220, 50%, 40%, 1) 54%, hsla(220, 58%, 36%, 1) 63%, hsla(220, 63%, 34%, 1) 73%, hsla(220, 67%, 32%, 1) 82%, hsla(220, 72%, 31%, 1) 90%, hsla(220, 78%, 29%, 1) 100%); */
+      /* --color-background: linear-gradient(0deg, hsla(158, 94%, 49%, 1) 0%, hsla(162, 95%, 43%, 1) 5%, hsla(164, 94%, 39%, 1) 12%, hsla(168, 94%, 35%, 1) 20%, hsla(172, 94%, 31%, 1) 29%, hsla(179, 93%, 26%, 1) 40%, hsla(188, 94%, 25%, 1) 50%, hsla(199, 93%, 23%, 1) 63%, hsla(212, 93%, 22%, 1) 77%, hsla(236, 94%, 19%, 1) 100%); */
+      --color-background: linear-gradient(0deg, hsla(158, 94%, 49%, 1) 0%, hsla(166, 93%, 34%, 1) 23%, hsla(177, 90%, 24%, 1) 47%, hsla(199, 90%, 19%, 1) 75%, hsla(224, 88%, 16%, 1) 100%);
       --calc-body-background: rgba(0, 0, 0, 0.25);
       
       /* --calc-body-border: 1px solid rgba(0, 0, 0, 0.18); */
