@@ -22,44 +22,48 @@
 <body>
     
     <div class="calc-body">
+        
         <div class="result-body">
             <h1 id="result">0</h1>
             <h3 id="expression">0</h1>
         </div>
         <div class="buttons-body">
             <div class="floor">
-                <button onclick="Clear()" class="func-icon">C</button>
+                <button onclick="clear()" class="func-icon">C</button>
                 <button class="func-icon">+/-</button>
                 <button class="func-icon">%</button>
-                <button onclick="Divide()" class="math-icon">÷</button>
+                <button onclick="divide()" class="math-icon">÷</button>
                 
             </div>
             <div class="floor">
-                <button onclick="Seven()" class="num-icon">7</button>
+                <button onclick="seven()" class="num-icon">7</button>
                 <button class="num-icon">8</button>
                 <button class="num-icon">9</button>
-                <button onclick="Multiply()" class="math-icon">×</button>
+                <button onclick="multiply()" class="math-icon">×</button>
             </div>
             <div class="floor">
                 <button class="num-icon">4</button>
                 <button class="num-icon">5</button>
                 <button class="num-icon">6</button>
-                <button onclick="Minus()" class="math-icon">-</button>
+                <button onclick="minus()" class="math-icon">-</button>
             </div>
             <div class="floor">
-                <button onclick="One()" class="num-icon">1</button>
+                <button onclick="one()" class="num-icon">1</button>
                 <button class="num-icon">2</button>
                 <button class="num-icon">3</button>
-                <button onclick="Plus()" class="math-icon" id="plus">+</button>
+                <button onclick="plus()" class="math-icon" id="plus">+</button>
             </div>
             <div class="floor">
-                <button onclick="Zero()" class="num-icon zero">0</button>
+                <button onclick="zero()" class="num-icon zero">0</button>
                 <button class="num-icon">.</button>
-                <button onclick="Equal()" class="math-icon">=</button>
+                <button onclick="equal()" class="math-icon">=</button>
             </div>
             
 
         </div>
+    </div>
+    <div class="screen-orientation-warning">
+        <p>This calculator is optimized for portrait mode.</p>
     </div>
     <div class="calc-titles">
         <p>© 2023 <a style="color: white; text-decoration: none;" href="https://reikavik.github.io" target="_blank">Reikavik</a></p>
@@ -67,5 +71,7 @@
     <!-- <script src="./js/script.js"></script> -->
     <!-- <script src="./js/app.js"></script> -->
     <!-- <script src="js/js.js"></script> -->
+    <!-- <script src="js/wt.js"></script> -->
+    <!-- <script src="js/abc.js"></script> -->
 </body>
 </html>

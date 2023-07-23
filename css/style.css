@@ -28,6 +28,15 @@ body {
     
 }
 
+.screen-orientation-warning {
+    color: white;
+    display: none;
+}
+
+.screen-orientation-warning > p {
+    margin: 0;
+}
+
 .calc-titles {
     color: white;
     
@@ -36,8 +45,10 @@ body {
 .calc-body {
     /* background-color: black;
     border-radius: 2rem;*/
-    
+    display: flex;
+    flex-direction: column;
     padding: 2rem;
+    gap: 1rem;
     /* background: rgba( 255, 255, 255, 0.25 ); */
     background: var(--calc-body-background);
     box-shadow: var(--calc-box-shadow);
@@ -54,13 +65,18 @@ body {
     gap: 1rem;
 }
 
+.result-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 #result {
     color: white;
     text-align: end;
     font-weight: 500;
     font-size: 3rem;
     margin: 0%;
-    padding: 1rem 0 0 0;
 }
 
 #expression {
@@ -69,7 +85,6 @@ body {
     font-weight: 500;
     font-size: 1.5rem;
     margin: 0%;
-    padding: 1rem 0;
 }
 
 .floor {
@@ -127,19 +142,36 @@ body {
     border-radius: 30px;
 }
 
-@media (max-width: 500px) {
+@media (max-height: 470px) {
+    .screen-orientation-warning {
+        color: white;
+        display: block;
+        position: fixed;
+        text-align: center;
+        font-size: 5vh;
+    }
+}
+
+@media (max-width: 450px) {
     .calc-body {
         padding: 6.7vw;
+        gap: 3.35vw
     }
+
+
+.result-body {
+    
+    gap: 1.675vw;
+}
 
     #result {
         font-size: 10vw;
-        padding: 1.675vw 0 0 0;
+        
     }
 
     #expression {
         font-size: 5vw;
-        padding: 1.675vw 0;
+        
     }
 
     .buttons-body {
@@ -185,7 +217,7 @@ body {
       --color-background: linear-gradient(0deg, hsla(221, 45%, 73%, 1) 0%, hsla(221, 42%, 68%, 1) 8%, hsla(221, 39%, 61%, 1) 16%, hsla(220, 37%, 56%, 1) 24%, hsla(220, 35%, 50%, 1) 33%, hsla(220, 43%, 44%, 1) 45%, hsla(220, 50%, 40%, 1) 54%, hsla(220, 58%, 36%, 1) 63%, hsla(220, 63%, 34%, 1) 73%, hsla(220, 67%, 32%, 1) 82%, hsla(220, 72%, 31%, 1) 90%, hsla(220, 78%, 29%, 1) 100%);
       --calc-body-background: rgba(0, 0, 0, 0.25);
       
-      --calc-body-border: 1px solid rgba(0, 0, 0, 0.18);
+      /* --calc-body-border: 1px solid rgba(0, 0, 0, 0.18); */
       /* --calc-box-shadow: 0 8px 32px 0 rgba(170, 173, 206, 0.37); */
     }
   }
