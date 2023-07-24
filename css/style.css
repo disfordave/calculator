@@ -5,7 +5,7 @@ html, body {
 }
 
 :root {
-    --color-background: linear-gradient(180deg, hsla(333, 100%, 53%, 1) 0%, hsla(344, 99%, 59%, 1) 25%, hsla(1, 97%, 65%, 1) 50%, hsla(19, 95%, 61%, 1) 75%, hsla(33, 94%, 57%, 1) 100%);
+    --color-background: linear-gradient(0deg, hsla(36, 89%, 68%, 1) 0%, hsla(348, 88%, 66%, 1) 100%);
     --calc-body-background: rgba( 255, 255, 255, 0.25 );
     --calc-body-border: 1px solid rgba( 255, 255, 255, 0.18 );
     --calc-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
