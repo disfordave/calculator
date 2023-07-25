@@ -68,9 +68,33 @@ function omitZero() {
     } else if (secondNum === "0") {
         secondNum = "";
     } else {
-        console.log("Error");
+        console.log("No zero");
     }
 }
+
+function backspace() {
+        if (operatorSelected === 0) {
+            firstNum = firstNum.slice(0, -1);
+            if (firstNum.length < 1) {
+                firstNum = "0"
+            }
+        } else if (operatorSelected === 1) {
+            secondNum = secondNum.slice(0, -1);
+            if (secondNum.length < 1) {
+                secondNum = "0"
+            }
+        } else {
+            document.getElementById("result").innerHTML = "Error";
+            console.log("error");
+        
+    }
+    console.log("finish backspace function");
+    updateStatus(); 
+    
+    
+}
+
+
 
 // function seven() {
 //     let number = "7";
@@ -152,6 +176,26 @@ function nine() {
     omitZero();
     numberAdd(number);
 }
+
+// function plusMinus() {
+//     let firstNumPM = false;
+//     let secondNumPM = false;
+//     if (!firstNumPM) {
+//         firstNum = "-" + firstNum;
+        
+//     } else if (firstNumPM) {
+//         firstNumPM = !firstNumPM;
+//     }
+//     // if (firstNum === "0") {
+//     //     return firstNum;
+//     // } else if (firstNum !== "0") {
+//     //     firstNum = ""
+//     // } else if (secondNum === "0") {
+//     //     return secondNum;
+//     // }
+//     updateStatus(); 
+
+// }
 
 function numberAdd(numb) {
     if (operatorSelected === 0) {
