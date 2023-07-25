@@ -34,7 +34,7 @@
         </div>
         <div class="buttons-body">
             <div class="floor">
-                <button onclick="clear()" class="func-icon">C</button>
+                <button onclick="clearAll()" class="func-icon">C</button>
                 <button class="func-icon">+/-</button>
                 <button class="func-icon">%</button>
                 <button onclick="divide()" class="math-icon">÷</button>
@@ -42,8 +42,8 @@
             </div>
             <div class="floor">
                 <button onclick="seven()" class="num-icon">7</button>
-                <button class="num-icon">8</button>
-                <button class="num-icon">9</button>
+                <button onclick="eight()" class="num-icon">8</button>
+                <button onclick="nine()" class="num-icon">9</button>
                 <button onclick="multiply()" class="math-icon">×</button>
             </div>
             <div class="floor">
@@ -60,8 +60,8 @@
             </div>
             <div class="floor">
                 <button onclick="zero()" class="num-icon zero">0</button>
-                <button class="num-icon">.</button>
-                <button onclick="equal()" class="math-icon">=</button>
+                <button onclick="decimalPoint()" class="num-icon">.</button>
+                <button onclick="operate()" class="math-icon">=</button>
             </div>
             
 
@@ -78,5 +78,6 @@
     <!-- <script src="js/js.js"></script> -->
     <!-- <script src="js/wt.js"></script> -->
     <!-- <script src="js/abc.js"></script> -->
+    <script src="js/calc.js"></script>
 </body>
 </html>
