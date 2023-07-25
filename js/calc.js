@@ -5,7 +5,7 @@ let showingNum = "";
 let showingExpNum = "";
 let operatorSelected = 0;
 
-function clearAll() {
+document.getElementById("clear-all").addEventListener("click", function() {
     firstNum = "0";
     secondNum = "0";
     operator = "";
@@ -13,7 +13,9 @@ function clearAll() {
     showingExpNum = "";
     operatorSelected = 0;
     updateStatus();
-}
+});
+
+document.getElementById("temp-one").addEventListener("click", one);
 
 function updateStatus() {
     if (operatorSelected === 0) {
@@ -43,7 +45,7 @@ function updateStatus() {
     
 }
 
-function operate() {
+document.getElementById("equal").addEventListener("click", function() {
     if (operatorSelected === 0) {
         document.getElementById("expression").innerHTML = firstNum;
     } else if (operatorSelected === 1) {
@@ -60,7 +62,7 @@ function operate() {
     } else {
         document.getElementById("expression").innerHTML = "Error";
     }
-}
+});
 
 function omitZero() {
     if (firstNum === "0") {
@@ -72,7 +74,7 @@ function omitZero() {
     }
 }
 
-function backspace() {
+document.getElementById("backspace").addEventListener("click", function()  {
         if (operatorSelected === 0) {
             firstNum = firstNum.slice(0, -1);
             if (firstNum.length < 1) {
@@ -92,7 +94,7 @@ function backspace() {
     updateStatus(); 
     
     
-}
+});
 
 
 
@@ -239,32 +241,28 @@ function operatorSelectedFunc() {
     }
 }
 
-function plus() {
-    // showingExpNum += "+";
+document.getElementById("plus").addEventListener("click", function() {
     operator = "+";
     operatorSelectedFunc();
     updateStatus();
-}
+});
 
-function minus() {
-    // showingExpNum += "+";
+document.getElementById("minus").addEventListener("click", function() {
     operator = "-";
     operatorSelectedFunc();
     updateStatus();
-}
+});
 
-function multiply() {
-    // showingExpNum += "+";
+document.getElementById("multiply").addEventListener("click", function() {
     operator = "×";
     operatorSelectedFunc();
     updateStatus();
-}
+});
 
-function divide() {
-    // showingExpNum += "+";
+document.getElementById("divide").addEventListener("click", function()  {
     operator = "÷";
     operatorSelectedFunc();
     updateStatus();
-}
+});
 
 
