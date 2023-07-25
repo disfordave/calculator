@@ -20,13 +20,13 @@ function updateStatus() {
         document.getElementById("result").innerHTML = firstNum;
     } else if (operatorSelected === 1) {
         if (operator === "+") {
-            document.getElementById("result").innerHTML = Number(firstNum) + Number(secondNum);
+            document.getElementById("result").innerHTML = Math.round((Number(firstNum) + Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
         } else if (operator === "-") {
-            document.getElementById("result").innerHTML = Number(firstNum) - Number(secondNum);
+            document.getElementById("result").innerHTML = Math.round((Number(firstNum) - Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
         } else if (operator === "×") {
-            document.getElementById("result").innerHTML = Number(firstNum) * Number(secondNum);
+            document.getElementById("result").innerHTML = Math.round((Number(firstNum) * Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
         } else if (operator === "÷") {
-            document.getElementById("result").innerHTML = Number(firstNum) / Number(secondNum);
+            document.getElementById("result").innerHTML = Math.round((Number(firstNum) / Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
         }
         
     } else {
@@ -48,13 +48,13 @@ function operate() {
         document.getElementById("expression").innerHTML = firstNum;
     } else if (operatorSelected === 1) {
         if (operator === "+") {
-            document.getElementById("expression").innerHTML = Number(firstNum) + Number(secondNum);
+            document.getElementById("expression").innerHTML = Math.round((Number(firstNum) + Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
         } else if (operator === "-") {
-            document.getElementById("expression").innerHTML = Number(firstNum) - Number(secondNum);
+            document.getElementById("expression").innerHTML = Math.round((Number(firstNum) - Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
         } else if (operator === "×") {
-            document.getElementById("expression").innerHTML = Number(firstNum) * Number(secondNum);
+            document.getElementById("expression").innerHTML = Math.round((Number(firstNum) * Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
         } else if (operator === "÷") {
-            document.getElementById("expression").innerHTML = Number(firstNum) / Number(secondNum);
+            document.getElementById("expression").innerHTML = Math.round((Number(firstNum) / Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
         }
         
     } else {
@@ -87,7 +87,9 @@ function omitZero() {
 
 function decimalPoint() {
     let number = ".";
-    
+    if (secondNum === "") {
+        secondNum += "0";
+    }
     numberAdd(number);
 }
 
@@ -99,6 +101,36 @@ function zero() {
 
 function one() {
     let number = "1";
+    omitZero();
+    numberAdd(number);
+}
+
+function two() {
+    let number = "2";
+    omitZero();
+    numberAdd(number);
+}
+
+function three() {
+    let number = "3";
+    omitZero();
+    numberAdd(number);
+}
+
+function four() {
+    let number = "4";
+    omitZero();
+    numberAdd(number);
+}
+
+function five() {
+    let number = "5";
+    omitZero();
+    numberAdd(number);
+}
+
+function six() {
+    let number = "6";
     omitZero();
     numberAdd(number);
 }
