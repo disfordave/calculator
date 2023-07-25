@@ -208,31 +208,62 @@ function numberAdd(numb) {
     updateStatus(); 
 }
 
+function temporalOperate() {
+    let temOp = document.getElementById("expression").innerHTML.slice(firstNum.length+1, firstNum.length+2);
+    if (operatorSelected === 0) {
+        document.getElementById("expression").innerHTML = firstNum;
+    } else if (operatorSelected === 1) {
+        if (temOp === "+") {
+            document.getElementById("expression").innerHTML = Math.round((Number(firstNum) + Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
+        } else if (temOp === "-") {
+            document.getElementById("expression").innerHTML = Math.round((Number(firstNum) - Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
+        } else if (temOp === "×") {
+            document.getElementById("expression").innerHTML = Math.round((Number(firstNum) * Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
+        } else if (temOp === "÷") {
+            document.getElementById("expression").innerHTML = Math.round((Number(firstNum) / Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
+        }
+        
+    } else {
+        document.getElementById("expression").innerHTML = "Error";
+    }
+}
+
+function operatorSelectedFunc() {
+    if (operatorSelected === 0) {
+        operatorSelected += 1;
+    } else {
+        temporalOperate();
+        firstNum = String(document.getElementById("result").innerHTML);
+        firstNum = String(document.getElementById("expression").innerHTML);
+        secondNum = "0"
+    }
+}
+
 function plus() {
     // showingExpNum += "+";
     operator = "+";
-    operatorSelected += 1;
+    operatorSelectedFunc();
     updateStatus();
 }
 
 function minus() {
     // showingExpNum += "+";
     operator = "-";
-    operatorSelected += 1;
+    operatorSelectedFunc();
     updateStatus();
 }
 
 function multiply() {
     // showingExpNum += "+";
     operator = "×";
-    operatorSelected += 1;
+    operatorSelectedFunc();
     updateStatus();
 }
 
 function divide() {
     // showingExpNum += "+";
     operator = "÷";
-    operatorSelected += 1;
+    operatorSelectedFunc();
     updateStatus();
 }
 
