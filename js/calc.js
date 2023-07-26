@@ -111,6 +111,8 @@ document.getElementById("backspace").addEventListener("click", function()  {
 //     updateStatus();
 // }
 
+document.getElementById("decimal-icon").addEventListener("click", decimalPoint);
+
 function decimalPoint() {
     let number = ".";
     if (secondNum === "") {
@@ -126,15 +128,37 @@ function decimalPoint() {
         document.getElementById("result").innerHTML = "Error";
         console.log("error");
     }
-    
+
     numberAdd(number);
 }
 
-function zero() {
-    let number = "0";
+let numIcon = document.getElementsByClassName("num-icon");
+
+
+for (let i = 0; i <= 9; i++) {
+    numIcon[i].addEventListener("click", function() {
+        numIcon[i].addEventListener("click", numSelect(numIcon[i].innerHTML));    
+    });
+}
+    
+
+
+
+
+
+
+function numSelect(no) {
+    let number = no;
+    console.log(number);
     omitZero();
     numberAdd(number);
 }
+
+// function zero() {
+//     let number = "0";
+//     omitZero();
+//     numberAdd(number);
+// }
 
 function one() {
     let number = "1";
@@ -142,53 +166,53 @@ function one() {
     numberAdd(number);
 }
 
-function two() {
-    let number = "2";
-    omitZero();
-    numberAdd(number);
-}
+// function two() {
+//     let number = "2";
+//     omitZero();
+//     numberAdd(number);
+// }
 
-function three() {
-    let number = "3";
-    omitZero();
-    numberAdd(number);
-}
+// function three() {
+//     let number = "3";
+//     omitZero();
+//     numberAdd(number);
+// }
 
-function four() {
-    let number = "4";
-    omitZero();
-    numberAdd(number);
-}
+// function four() {
+//     let number = "4";
+//     omitZero();
+//     numberAdd(number);
+// }
 
-function five() {
-    let number = "5";
-    omitZero();
-    numberAdd(number);
-}
+// function five() {
+//     let number = "5";
+//     omitZero();
+//     numberAdd(number);
+// }
 
-function six() {
-    let number = "6";
-    omitZero();
-    numberAdd(number);
-}
+// function six() {
+//     let number = "6";
+//     omitZero();
+//     numberAdd(number);
+// }
 
-function seven() {
-    let number = "7";
-    omitZero();
-    numberAdd(number);
-}
+// function seven() {
+//     let number = "7";
+//     omitZero();
+//     numberAdd(number);
+// }
 
-function eight() {
-    let number = "8";
-    omitZero();
-    numberAdd(number);
-}
+// function eight() {
+//     let number = "8";
+//     omitZero();
+//     numberAdd(number);
+// }
 
-function nine() {
-    let number = "9";
-    omitZero();
-    numberAdd(number);
-}
+// function nine() {
+//     let number = "9";
+//     omitZero();
+//     numberAdd(number);
+// }
 
 // function plusMinus() {
 //     let firstNumPM = false;
