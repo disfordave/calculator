@@ -116,6 +116,17 @@ function decimalPoint() {
     if (secondNum === "") {
         secondNum += "0";
     }
+
+    if (operatorSelected === 0 && firstNum.includes(".")) {
+        return firstNum;
+        
+    } else if (operatorSelected === 1 && secondNum.includes(".")) {
+        return secondNum;
+    } else {
+        document.getElementById("result").innerHTML = "Error";
+        console.log("error");
+    }
+    
     numberAdd(number);
 }
 
