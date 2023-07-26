@@ -68,7 +68,7 @@ function omitZero() {
     } else if (secondNum === "0") {
         secondNum = "";
     } else {
-        console.log("No zero");
+        return;
     }
 }
 
@@ -85,29 +85,10 @@ document.getElementById("backspace").addEventListener("click", function()  {
             }
         } else {
             document.getElementById("result").innerHTML = "Error";
-            console.log("error");
-        
+            console.log("error"); 
     }
-    console.log("finish backspace function");
     updateStatus(); 
-    
-    
 });
-
-
-
-// function seven() {
-//     let number = "7";
-//     omitZero();
-//     if (operatorSelected === 0) {
-//         firstNum += number;
-//     } else if (operatorSelected === 1) {
-//         secondNum += number;
-//     } else {
-//         document.getElementById("result").innerHTML = "Error";
-//     }
-//     updateStatus();
-// }
 
 document.getElementById("decimal-icon").addEventListener("click", decimalPoint);
 
@@ -126,12 +107,10 @@ function decimalPoint() {
         document.getElementById("result").innerHTML = "Error";
         console.log("error");
     }
-
     numberAdd(number);
 }
 
 let numIcon = document.getElementsByClassName("num-icon");
-
 
 for (let i = 0; i <= 9; i++) {
     numIcon[i].addEventListener("click", function() {
@@ -141,30 +120,37 @@ for (let i = 0; i <= 9; i++) {
     
 function numSelect(no) {
     let number = no;
-    console.log(number);
     omitZero();
     numberAdd(number);
 }
 
-// function plusMinus() {
-//     let firstNumPM = false;
-//     let secondNumPM = false;
-//     if (!firstNumPM) {
-//         firstNum = "-" + firstNum;
-        
-//     } else if (firstNumPM) {
-//         firstNumPM = !firstNumPM;
-//     }
-//     // if (firstNum === "0") {
-//     //     return firstNum;
-//     // } else if (firstNum !== "0") {
-//     //     firstNum = ""
-//     // } else if (secondNum === "0") {
-//     //     return secondNum;
-//     // }
-//     updateStatus(); 
-
-// }
+document.getElementById("plus-minus").addEventListener("click", function() {
+    console.log("you clicked plusminusbutton");
+    if (operatorSelected === 0) {
+        if (!firstNum.includes("-")) {
+            omitZero();
+            firstNum = "-" + firstNum;
+        } else {
+            firstNum = firstNum.slice(1, firstNum.length);
+            if (firstNum.length < 1) {
+                firstNum = "0"
+            }
+        }
+    } else if (operatorSelected === 1) {
+        if (!secondNum.includes("-")) {
+            omitZero();
+            secondNum = "-" + secondNum;
+        } else {
+            secondNum = secondNum.slice(1, secondNum.length);
+            if (secondNum.length < 1) {
+                secondNum = "0"
+            }
+        }
+    } else {
+        document.getElementById("expression").innerHTML = "Error";
+    }
+    updateStatus();
+});
 
 function numberAdd(numb) {
     if (operatorSelected === 0) {
@@ -191,7 +177,6 @@ function temporalOperate() {
         } else if (temOp === "÷") {
             document.getElementById("expression").innerHTML = Math.round((Number(firstNum) / Number(secondNum) + Number.EPSILON) * 1000000) / 1000000;
         }
-        
     } else {
         document.getElementById("expression").innerHTML = "Error";
     }
