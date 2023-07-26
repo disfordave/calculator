@@ -15,8 +15,6 @@ document.getElementById("clear-all").addEventListener("click", function() {
     updateStatus();
 });
 
-document.getElementById("temp-one").addEventListener("click", one);
-
 function updateStatus() {
     if (operatorSelected === 0) {
         document.getElementById("result").innerHTML = firstNum;
@@ -141,78 +139,12 @@ for (let i = 0; i <= 9; i++) {
     });
 }
     
-
-
-
-
-
-
 function numSelect(no) {
     let number = no;
     console.log(number);
     omitZero();
     numberAdd(number);
 }
-
-// function zero() {
-//     let number = "0";
-//     omitZero();
-//     numberAdd(number);
-// }
-
-function one() {
-    let number = "1";
-    omitZero();
-    numberAdd(number);
-}
-
-// function two() {
-//     let number = "2";
-//     omitZero();
-//     numberAdd(number);
-// }
-
-// function three() {
-//     let number = "3";
-//     omitZero();
-//     numberAdd(number);
-// }
-
-// function four() {
-//     let number = "4";
-//     omitZero();
-//     numberAdd(number);
-// }
-
-// function five() {
-//     let number = "5";
-//     omitZero();
-//     numberAdd(number);
-// }
-
-// function six() {
-//     let number = "6";
-//     omitZero();
-//     numberAdd(number);
-// }
-
-// function seven() {
-//     let number = "7";
-//     omitZero();
-//     numberAdd(number);
-// }
-
-// function eight() {
-//     let number = "8";
-//     omitZero();
-//     numberAdd(number);
-// }
-
-// function nine() {
-//     let number = "9";
-//     omitZero();
-//     numberAdd(number);
-// }
 
 // function plusMinus() {
 //     let firstNumPM = false;
